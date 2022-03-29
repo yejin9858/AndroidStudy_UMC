@@ -8,7 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
 
         <ImageView
             android:id="@+id/home_pannel_background_iv"
@@ -19,6 +20,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
 
         <ImageView
             android:id="@+id/home_pannel_btn_nugu_iv"
@@ -127,7 +129,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginBottom="30dp"
             android:src="@drawable/img_album_exp"
-            app:layout_constraintBottom_toBottomOf="@id/home_pannel_background_iv"
+            app:layout_constraintBottom_toBottomOf="@id/home_pannel_background_vp"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
@@ -166,7 +168,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_pannel_background_iv" />
+            app:layout_constraintTop_toBottomOf="@id/home_pannel_background_vp" />
 
         <ImageView
             android:id="@+id/home_today_music_title_btn_iv"
@@ -189,7 +191,7 @@
             android:textColor="#3F3FFF"
             android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@id/home_today_music_domestic_tv"
-            app:layout_constraintTop_toBottomOf="@id/home_pannel_background_iv" />
+            app:layout_constraintTop_toBottomOf="@id/home_pannel_background_vp" />
 
         <TextView
             android:id="@+id/home_today_music_domestic_tv"
@@ -200,7 +202,7 @@
             android:text="국내"
             android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@id/home_today_music_oversea_tv"
-            app:layout_constraintTop_toBottomOf="@id/home_pannel_background_iv" />
+            app:layout_constraintTop_toBottomOf="@id/home_pannel_background_vp" />
 
         <TextView
             android:id="@+id/home_today_music_oversea_tv"
@@ -211,7 +213,7 @@
             android:text="해외"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_pannel_background_iv" />
+            app:layout_constraintTop_toBottomOf="@id/home_pannel_background_vp" />
 
                     <HorizontalScrollView
                         android:id="@+id/home_today_music_oversea_hs"
@@ -303,6 +305,7 @@
                                     android:textSize="16sp"
                                     android:textColor="@color/black"/>
 
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -375,7 +378,7 @@
             android:layout_marginTop="15dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_today_music_album_rv"/>
+            app:layout_constraintTop_toBottomOf="@id/home_today_music_oversea_hs"/>
 
         <TextView
             android:id="@+id/home_daily_music_title_tv"

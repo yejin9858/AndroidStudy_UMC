@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    //bottom navigation 코드
     private fun initBottomNavigation(){
 
         supportFragmentManager.beginTransaction()
