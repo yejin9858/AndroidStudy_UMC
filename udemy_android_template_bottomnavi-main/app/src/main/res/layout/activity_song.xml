@@ -252,22 +252,47 @@
 
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/song_repeat_iv_on"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="28dp"
+        android:src="@drawable/nugu_btn_repeat_inactive"
+        app:layout_constraintBottom_toBottomOf="@+id/song_player_layout"
+        app:layout_constraintEnd_toStartOf="@+id/song_player_layout"
+        app:layout_constraintTop_toTopOf="@+id/song_player_layout"
+        app:layout_constraintVertical_bias="0.0"
+        app:tint="@color/flo" />
 
     <ImageView
         android:id="@+id/song_repeat_iv"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginEnd="28dp"
+        android:visibility="gone"
         android:src="@drawable/nugu_btn_repeat_inactive"
         app:layout_constraintBottom_toBottomOf="@+id/song_player_layout"
         app:layout_constraintEnd_toStartOf="@+id/song_player_layout"
-        app:layout_constraintTop_toTopOf="@+id/song_player_layout" />
+        app:layout_constraintTop_toTopOf="@+id/song_player_layout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/song_random_iv_on"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/nugu_btn_random_inactive"
+        app:layout_constraintBottom_toBottomOf="@+id/song_player_layout"
+        app:layout_constraintStart_toEndOf="@+id/song_player_layout"
+        app:layout_constraintTop_toTopOf="@+id/song_player_layout"
+        app:tint="@color/flo"/>
 
     <ImageView
         android:id="@+id/song_random_iv"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="30dp"
+        android:visibility="gone"
         android:src="@drawable/nugu_btn_random_inactive"
         app:layout_constraintBottom_toBottomOf="@+id/song_player_layout"
         app:layout_constraintStart_toEndOf="@+id/song_player_layout"

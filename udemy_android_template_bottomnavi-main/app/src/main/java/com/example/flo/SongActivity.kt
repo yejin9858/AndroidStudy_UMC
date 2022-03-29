@@ -1,6 +1,8 @@
 package com.example.flo
 
+import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flo.databinding.ActivitySongBinding
@@ -28,6 +30,21 @@ class SongActivity : AppCompatActivity() {
             binding.songMusicTitleTv.text = intent.getStringExtra("title")
             binding.songSingerNameTv.text = intent.getStringExtra("singer")
         }
+
+        binding.songRepeatIvOn.setOnClickListener{
+            setRepeatStatus(false);
+        }
+        binding.songRepeatIv.setOnClickListener {
+            setRepeatStatus(true);
+        }
+
+        binding.songRandomIvOn.setOnClickListener{
+            setRandomStatus(false);
+        }
+        binding.songRandomIv.setOnClickListener {
+            setRandomStatus(true);
+        }
+
     }
 
     fun setPlayerStatus(isPlaying : Boolean){
@@ -38,6 +55,28 @@ class SongActivity : AppCompatActivity() {
         else{
             binding.songMiniplayerIv.visibility = View.GONE
             binding.songPauseIv.visibility = View.VISIBLE
+        }
+    }
+
+    fun setRepeatStatus(isRepeat: Boolean){
+        if(isRepeat){
+            binding.songRepeatIvOn.visibility = View.VISIBLE
+            binding.songRepeatIv.visibility = View.GONE
+        }
+        else{
+            binding.songRepeatIvOn.visibility = View.GONE
+            binding.songRepeatIv.visibility = View.VISIBLE
+        }
+    }
+
+    fun setRandomStatus(isRandom: Boolean){
+        if(isRandom){
+            binding.songRandomIvOn.visibility = View.VISIBLE
+            binding.songRandomIv.visibility = View.GONE
+        }
+        else{
+            binding.songRandomIvOn.visibility = View.GONE
+            binding.songRandomIv.visibility = View.VISIBLE
         }
     }
 

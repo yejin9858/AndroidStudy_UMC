@@ -22,6 +22,7 @@ class AlbumFragment : Fragment() {
     ): View? {
         binding = FragmentAlbumBinding.inflate(inflater, container, false)
 
+
         binding.albumBackIv.setOnClickListener {
             (context as MainActivity).supportFragmentManager.beginTransaction().replace(R.id.main_frm, HomeFragment()).commitAllowingStateLoss()
         }
@@ -29,6 +30,24 @@ class AlbumFragment : Fragment() {
         binding.songLalacLayout.setOnClickListener{
             Toast.makeText(activity, "LILAC", Toast.LENGTH_SHORT).show()
         }
+
+        binding.songMixonTg.setOnClickListener{
+            setMixStatus(false)
+        }
+        binding.songMixoffTg.setOnClickListener{
+            setMixStatus(true)
+        }
         return binding.root
+    }
+
+    fun setMixStatus(isRandom: Boolean){
+        if(isRandom){
+            binding.songMixonTg.visibility = View.VISIBLE
+            binding.songMixoffTg.visibility = View.GONE
+        }
+        else{
+            binding.songMixonTg.visibility = View.GONE
+            binding.songMixoffTg.visibility = View.VISIBLE
+        }
     }
 }
