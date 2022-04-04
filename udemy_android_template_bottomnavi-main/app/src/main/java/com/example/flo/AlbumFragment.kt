@@ -24,38 +24,19 @@ class AlbumFragment : Fragment() {
 
 
         binding.albumBackIv.setOnClickListener {
-            (context as MainActivity).supportFragmentManager.beginTransaction().replace(R.id.main_frm, HomeFragment()).commitAllowingStateLoss()
+            (context as MainActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id.main_frm, HomeFragment()).commitAllowingStateLoss()
         }
 
-//        binding.songLalacLayout.setOnClickListener{
-//            Toast.makeText(activity, "LILAC", Toast.LENGTH_SHORT).show()
-//        }
-//
-//        binding.songMixonTg.setOnClickListener{
-//            setMixStatus(false)
-//        }
-//        binding.songMixoffTg.setOnClickListener{
-//            setMixStatus(true)
-//        }
+
         val albumAdapter = AlbumVPAdapter(this)
         binding.albumContentVp.adapter = albumAdapter
 
-        TabLayoutMediator(binding.albumContentTb, binding.albumContentVp){
-            tab, position ->
+        TabLayoutMediator(binding.albumContentTb, binding.albumContentVp) { tab, position ->
             tab.text = information[position]
         }.attach()
 
+
         return binding.root
     }
-
-//    fun setMixStatus(isRandom: Boolean){
-//        if(isRandom){
-//            binding.songMixonTg.visibility = View.VISIBLE
-//            binding.songMixoffTg.visibility = View.GONE
-//        }
-//        else{
-//            binding.songMixonTg.visibility = View.GONE
-//            binding.songMixoffTg.visibility = View.VISIBLE
-//        }
-//    }
 }

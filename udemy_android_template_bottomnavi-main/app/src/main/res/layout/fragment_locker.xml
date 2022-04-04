@@ -42,6 +42,7 @@
         app:layout_constraintTop_toBottomOf="@id/locker_title_tv"
         app:layout_constraintStart_toStartOf="parent"/>
 
+<!--
     <ImageView
         android:id="@+id/locker_select_all_img_iv"
         android:layout_width="25dp"
@@ -90,6 +91,7 @@
         app:layout_constraintTop_toTopOf="@id/locker_select_all_img_iv"
         app:layout_constraintBottom_toBottomOf="@id/locker_select_all_img_iv"
         app:layout_constraintEnd_toEndOf="parent"/>
+-->
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/locker_content_vp"
@@ -100,6 +102,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/locker_select_all_img_iv" />
+        app:layout_constraintTop_toBottomOf="@id/locker_content_tb" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
