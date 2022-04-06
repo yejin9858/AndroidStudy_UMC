@@ -10,6 +10,8 @@ import com.example.flo.databinding.ActivitySongBinding
 class SongActivity : AppCompatActivity() {
 
     lateinit var binding : ActivitySongBinding
+    lateinit var song : Song
+    lateinit var timer : Timer
 
     //Activity 실행 시 처음 실행되는 함수
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,18 +19,19 @@ class SongActivity : AppCompatActivity() {
         binding = ActivitySongBinding.inflate(layoutInflater)
         //xml 가져와서 맘대로 쓸거야
         setContentView(binding.root)
+
+        initSong()
+        setPlayer(song)
+
+
         binding.songDownIb.setOnClickListener{
             finish()
         }
         binding.songMiniplayerIv.setOnClickListener{
-            setPlayerStatus(false);
-        }
-        binding.songPauseIv.setOnClickListener {
             setPlayerStatus(true);
         }
-        if(intent.hasExtra("title") && intent.hasExtra("singer")){
-            binding.songMusicTitleTv.text = intent.getStringExtra("title")
-            binding.songSingerNameTv.text = intent.getStringExtra("singer")
+        binding.songPauseIv.setOnClickListener {
+            setPlayerStatus(false);
         }
 
         binding.songRepeatIvOn.setOnClickListener{
@@ -47,18 +50,20 @@ class SongActivity : AppCompatActivity() {
 
     }
 
-    fun setPlayerStatus(isPlaying : Boolean){
+    private fun setPlayerStatus(isPlaying : Boolean){
+        song.isPlaying = isPlaying
+        timer.isPlaying = isPlaying
         if(isPlaying){
-            binding.songMiniplayerIv.visibility = View.VISIBLE
-            binding.songPauseIv.visibility = View.GONE
-        }
-        else{
             binding.songMiniplayerIv.visibility = View.GONE
             binding.songPauseIv.visibility = View.VISIBLE
         }
+        else{
+            binding.songMiniplayerIv.visibility = View.VISIBLE
+            binding.songPauseIv.visibility = View.GONE
+        }
     }
 
-    fun setRepeatStatus(isRepeat: Boolean){
+    private fun setRepeatStatus(isRepeat: Boolean){
         if(isRepeat){
             binding.songRepeatIvOn.visibility = View.VISIBLE
             binding.songRepeatIv.visibility = View.GONE
@@ -69,7 +74,7 @@ class SongActivity : AppCompatActivity() {
         }
     }
 
-    fun setRandomStatus(isRandom: Boolean){
+    private fun setRandomStatus(isRandom: Boolean){
         if(isRandom){
             binding.songRandomIvOn.visibility = View.VISIBLE
             binding.songRandomIv.visibility = View.GONE
@@ -80,5 +85,76 @@ class SongActivity : AppCompatActivity() {
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        timer.interrupt()
+    }
+
+    private fun initSong(){
+        if(intent.hasExtra("title") && intent.hasExtra("singer")){
+            song = Song (
+                intent.getStringExtra("title")!!,
+                intent.getStringExtra("singer")!!,
+                intent.getIntExtra("second", 0),
+                intent.getIntExtra("playTime", 0),
+                intent.getBooleanExtra("isPlaying", false)
+            )
+        }
+        startTimer()
+    }
+
+    private fun setPlayer(song : Song){
+
+        binding.songMusicTitleTv.text = intent.getStringExtra("title")!!
+        binding.songSingerNameTv.text = intent.getStringExtra("singer")!!
+        binding.songStartTimeTv.text = String.format("%02d:%02d", song.second/ 60, song.second%60)
+        binding.songStartTimeTv.text = String.format("%02d:%02d", song.playTime/ 60, song.playTime%60)
+        binding.songProgressSb.progress = (song.second * 1000/ song.playTime)
+
+        setPlayerStatus(song.isPlaying)
+    }
+
+    private fun startTimer(){
+        timer = Timer(song.playTime, song.isPlaying)
+        timer.start()
+    }
+
+    //내부 클래스
+    inner class Timer(private val playTime: Int, var isPlaying: Boolean = true):Thread(){
+        private var second : Int = 0;
+        private var mills : Float = 0f;
+
+        override fun run(){
+            super.run()
+            try{
+                while (true){
+                    if(second >= playTime){
+                        break
+                    }
+
+                    if(isPlaying){
+                        sleep(50)
+                        mills +=50
+
+                        runOnUiThread{
+                            binding.songProgressSb.progress = ((mills / playTime)*100).toInt()
+                        }
+
+                        if(mills % 1000 == 0f) {
+                            runOnUiThread {
+                                binding.songStartTimeTv.text =
+                                    String.format("%02d:%02d", second / 60, second % 60)
+                            }
+                            second++
+                        }
+                    }
+                }
+            }
+            catch(e : InterruptedException){
+                Log.d("Song","스레드가 죽었습니다. ${e.message}")
+            }
+
+        }
+    }
 
 }
