@@ -8,7 +8,6 @@ import java.util.ArrayList
 class BackgroundVPAdapter(fragment:Fragment) : FragmentStateAdapter(fragment){
 
     private val fragmentlist : ArrayList<Fragment> = ArrayList()
-    var indicatorDotList: ArrayList<ImageView> = ArrayList() //인디케이터 배열
 
     override fun getItemCount(): Int = fragmentlist.size
 
