@@ -21,17 +21,17 @@
         <entry key="..\:/Users/yejin/Desktop/Study/2022/SookmyungUMC/AndroidStudyUMC/udemy_android_template_bottomnavi-main/app/src/main/res/layout/activity_song.xml" value="0.1" />
         <entry key="..\:/Users/yejin/Desktop/Study/2022/SookmyungUMC/AndroidStudyUMC/udemy_android_template_bottomnavi-main/app/src/main/res/layout/activity_splash.xml" value="0.14739583333333334" />
         <entry key="..\:/Users/yejin/Desktop/Study/2022/SookmyungUMC/AndroidStudyUMC/udemy_android_template_bottomnavi-main/app/src/main/res/layout/fragment_album.xml" value="0.1" />
-        <entry key="..\:/Users/yejin/Desktop/Study/2022/SookmyungUMC/AndroidStudyUMC/udemy_android_template_bottomnavi-main/app/src/main/res/layout/fragment_background.xml" value="0.20885416666666667" />
+        <entry key="..\:/Users/yejin/Desktop/Study/2022/SookmyungUMC/AndroidStudyUMC/udemy_android_template_bottomnavi-main/app/src/main/res/layout/fragment_background.xml" value="0.152" />
         <entry key="..\:/Users/yejin/Desktop/Study/2022/SookmyungUMC/AndroidStudyUMC/udemy_android_template_bottomnavi-main/app/src/main/res/layout/fragment_banner.xml" value="0.23324275362318841" />
         <entry key="..\:/Users/yejin/Desktop/Study/2022/SookmyungUMC/AndroidStudyUMC/udemy_android_template_bottomnavi-main/app/src/main/res/layout/fragment_detail.xml" value="0.1828125" />
-        <entry key="..\:/Users/yejin/Desktop/Study/2022/SookmyungUMC/AndroidStudyUMC/udemy_android_template_bottomnavi-main/app/src/main/res/layout/fragment_home.xml" value="0.10400000000000001" />
-        <entry key="..\:/Users/yejin/Desktop/Study/2022/SookmyungUMC/AndroidStudyUMC/udemy_android_template_bottomnavi-main/app/src/main/res/layout/fragment_locker.xml" value="0.23324275362318841" />
+        <entry key="..\:/Users/yejin/Desktop/Study/2022/SookmyungUMC/AndroidStudyUMC/udemy_android_template_bottomnavi-main/app/src/main/res/layout/fragment_home.xml" value="0.12268041237113401" />
+        <entry key="..\:/Users/yejin/Desktop/Study/2022/SookmyungUMC/AndroidStudyUMC/udemy_android_template_bottomnavi-main/app/src/main/res/layout/fragment_locker.xml" value="0.264" />
         <entry key="..\:/Users/yejin/Desktop/Study/2022/SookmyungUMC/AndroidStudyUMC/udemy_android_template_bottomnavi-main/app/src/main/res/layout/fragment_locker_musicfile.xml" value="0.23324275362318841" />
         <entry key="..\:/Users/yejin/Desktop/Study/2022/SookmyungUMC/AndroidStudyUMC/udemy_android_template_bottomnavi-main/app/src/main/res/layout/fragment_locker_savedalbum.xml" value="0.23324275362318841" />
         <entry key="..\:/Users/yejin/Desktop/Study/2022/SookmyungUMC/AndroidStudyUMC/udemy_android_template_bottomnavi-main/app/src/main/res/layout/fragment_locker_savedsong.xml" value="0.20885416666666667" />
         <entry key="..\:/Users/yejin/Desktop/Study/2022/SookmyungUMC/AndroidStudyUMC/udemy_android_template_bottomnavi-main/app/src/main/res/layout/fragment_look.xml" value="0.1828125" />
         <entry key="..\:/Users/yejin/Desktop/Study/2022/SookmyungUMC/AndroidStudyUMC/udemy_android_template_bottomnavi-main/app/src/main/res/layout/fragment_search.xml" value="0.1828125" />
-        <entry key="..\:/Users/yejin/Desktop/Study/2022/SookmyungUMC/AndroidStudyUMC/udemy_android_template_bottomnavi-main/app/src/main/res/layout/fragment_song.xml" value="0.1828125" />
+        <entry key="..\:/Users/yejin/Desktop/Study/2022/SookmyungUMC/AndroidStudyUMC/udemy_android_template_bottomnavi-main/app/src/main/res/layout/fragment_song.xml" value="0.16799999999999998" />
         <entry key="..\:/Users/yejin/Desktop/Study/2022/SookmyungUMC/AndroidStudyUMC/udemy_android_template_bottomnavi-main/app/src/main/res/layout/fragment_video.xml" value="0.2608695652173913" />
         <entry key="..\:/Users/yejin/Desktop/Study/2022/SookmyungUMC/AndroidStudyUMC/udemy_android_template_bottomnavi-main/app/src/main/res/layout/indicator_dot_off.xml" value="0.1" />
         <entry key="..\:/Users/yejin/Desktop/Study/2022/SookmyungUMC/AndroidStudyUMC/udemy_android_template_bottomnavi-main/app/src/main/res/layout/indicator_dot_one.xml" value="0.1" />

@@ -31,11 +31,6 @@ class HomeFragment : Fragment() {
             Log.d("msg","앨범 클릭됨")
             (context as MainActivity).supportFragmentManager.beginTransaction().replace(R.id.main_frm, AlbumFragment()).commitAllowingStateLoss()
         }
-        //fragment 전환
-        binding.homeAlbumImgIv1.setOnClickListener {
-            Log.d("msg","앨범 클릭됨")
-            (context as MainActivity).supportFragmentManager.beginTransaction().replace(R.id.main_frm, AlbumFragment()).commitAllowingStateLoss()
-        }
 
         albumDatas.apply {
             add(Album("Butter", "방탄소년단 (BTS)", R.drawable.img_album_exp))

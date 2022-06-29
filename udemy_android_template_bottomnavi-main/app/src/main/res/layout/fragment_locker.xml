@@ -42,12 +42,13 @@
         app:layout_constraintTop_toBottomOf="@id/locker_title_tv"
         app:layout_constraintStart_toStartOf="parent"/>
 
-<!--
+
     <ImageView
         android:id="@+id/locker_select_all_img_iv"
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
         android:src="@drawable/btn_playlist_select_off"
         app:layout_constraintTop_toBottomOf="@id/locker_content_tb"
         app:layout_constraintStart_toStartOf="@id/locker_content_tb"/>
@@ -91,13 +92,13 @@
         app:layout_constraintTop_toTopOf="@id/locker_select_all_img_iv"
         app:layout_constraintBottom_toBottomOf="@id/locker_select_all_img_iv"
         app:layout_constraintEnd_toEndOf="parent"/>
--->
+
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/locker_content_vp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintVertical_bias="1.0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

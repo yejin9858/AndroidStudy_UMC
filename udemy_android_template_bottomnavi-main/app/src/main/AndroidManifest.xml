@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FLO">
-        <!--방법1_권유x
-        <activity
+        <!--방법1_권유x-->
+        <!--<activity
             android:name=".MainActivity"
             android:exported="true"/>
         <activity

@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.flo.databinding.FragmentBackgroundBinding
-import com.example.flo.databinding.FragmentBannerBinding
 
 class BackgroundFragment(val imgRes : Int):Fragment() {
     lateinit var binding:FragmentBackgroundBinding
