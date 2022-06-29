@@ -44,9 +44,15 @@ class MainActivity : AppCompatActivity() {
             var intent = Intent(this, SongActivity::class.java)
             startActivity(intent)
         }
-        initBottomNavigation()
+
+        Log.d("MAIN/JWT_TO_SERVER", getJwt().toString())
 
 
+    }
+
+    private fun getJwt():String? {
+        val spf = this.getSharedPreferences("auth", AppCompatActivity.MODE_PRIVATE)
+        return spf!!.getString("jwt", "")
     }
 
     //UI 초기화 하기에 안정적

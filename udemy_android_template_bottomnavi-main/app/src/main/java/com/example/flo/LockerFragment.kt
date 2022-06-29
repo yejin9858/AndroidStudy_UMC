@@ -17,7 +17,7 @@ class LockerFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        initView()
+        initViews()
     }
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -41,26 +41,35 @@ class LockerFragment : Fragment() {
         return binding.root
     }
 
-    private fun getJwt():Int{
-        val spf = activity?.getSharedPreferences("auth", AppCompatActivity.MODE_PRIVATE)
-        return spf!!.getInt("jwt", 0)
-    }
+    private fun initViews() {
+        val jwt: String? = getJwt2()
 
-    private fun initView(){
-        val jwt : Int = getJwt()
-        if (jwt == 0){
+        if (jwt == ""){
             binding.lockerLoginTv.text = "로그인"
-            binding.lockerLoginTv.setOnClickListener{
+
+            binding.lockerLoginTv.setOnClickListener {
                 startActivity(Intent(activity, LoginActivity::class.java))
             }
         }
         else{
             binding.lockerLoginTv.text = "로그아웃"
-            binding.lockerLoginTv.setOnClickListener{
+
+            binding.lockerLoginTv.setOnClickListener {
                 logout()
                 startActivity(Intent(activity, MainActivity::class.java))
             }
         }
+    }
+
+//    private fun getJwt(): Int {
+//        val spf = activity?.getSharedPreferences("auth" , AppCompatActivity.MODE_PRIVATE)
+//
+//        return spf!!.getInt("jwt", 0)
+//    }
+
+    private fun getJwt2():String? {
+        val spf = activity?.getSharedPreferences("auth", AppCompatActivity.MODE_PRIVATE)
+        return spf!!.getString("jwt", "")
     }
 
     private fun logout(){
