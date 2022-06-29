@@ -181,11 +181,64 @@ class MainActivity : AppCompatActivity() {
             )
         )
 
+        songDB.songDao().insert(
+            Song(
+                "ONE",
+                "아스트로 (ASTRO)",
+                0,
+                210,
+                false,
+                "music_next",
+                R.drawable.img_album_exp7,
+                false,
+            )
+        )
+
+        songDB.songDao().insert(
+            Song(
+                "Stardust",
+                "아스트로 (ASTRO)",
+                0,
+                210,
+                false,
+                "music_next",
+                R.drawable.img_album_exp7,
+                false,
+            )
+        )
+
+        songDB.songDao().insert(
+            Song(
+                "Someone Else",
+                "아스트로 (ASTRO)",
+                0,
+                210,
+                false,
+                "music_next",
+                R.drawable.img_album_exp7,
+                false,
+            )
+        )
+
+
+        songDB.songDao().insert(
+            Song(
+                "Candy Sugar Pop",
+                "아스트로 (ASTRO)",
+                0,
+                210,
+                false,
+                "music_next",
+                R.drawable.img_album_exp8,
+                false,
+            )
+        )
+
 
         songDB.songDao().insert(
             Song(
                 "Boy with Luv",
-                "music_boy",
+                "방탄소년단 (BTS)",
                 0,
                 230,
                 false,
