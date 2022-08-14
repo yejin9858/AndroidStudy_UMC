@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.flo">
+    package="com.example.flo"> <!-- 패키지명, 뒤에서 생략 가능 -->
     <uses-permission android:name="android.permission.INTERNET"/>
 
 
@@ -26,7 +26,7 @@
         </activity>-->
         <!--방법2-->
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.main.MainActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -35,9 +35,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.flo.SongActivity"/>
-        <activity android:name="com.example.flo.LoginActivity"/>
-        <activity android:name="com.example.flo.SignUpActivity"/>
+        <activity android:name=".ui.song.SongActivity"/>
+        <activity android:name=".ui.signin.LoginActivity"/>
+        <activity android:name=".ui.signup.SignUpActivity"/>
     </application>
 
 </manifest>
